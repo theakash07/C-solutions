@@ -1,0 +1,16 @@
+//Write a program in C to display the multiplication table of a given integer.
+#include<stdio.h>
+int main()
+{
+  int i,table,n;
+  printf("enter table number to printed:");
+  scanf("%d",&n);
+  for(i=1;i<=10;i++)
+  {
+    printf("%dx%d=",n,i);
+    table=n*i;
+    printf("%d\n",table);
+
+  }
+  return 0;
+}

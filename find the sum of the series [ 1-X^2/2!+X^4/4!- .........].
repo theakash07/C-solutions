@@ -1,0 +1,16 @@
+//Write a program in C to find the sum of the series [ 1-X^2/2!+X^4/4!- .........].
+#include<stdio.h>
+int main()
+{
+  int x=1,n,sum=0;
+ int fact=1;
+  printf("enter terms you want to add:");
+  scanf("%d",&n);
+  for(int i=1;i<=n;i++)
+  {
+    fact=fact*i;
+    x=x*2*i/fact;
+    sum+=x;
+  }
+  printf("the sum is %d",sum);
+}

@@ -1,0 +1,17 @@
+// Write a C program to check whether a triangle can be formed by the given value for the angles.
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+  int side1,side2,side3;
+  int sum=0;
+  printf("enter sides:");
+  scanf("%d%d%d",&side1,&side2,&side3);
+  sum=side1+side2+side3;
+  if(sum==180)
+  printf("it's a valid angle:");
+  else
+  printf("it's not a valid angle:");
+  return 0;
+  
+}

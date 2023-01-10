@@ -1,0 +1,22 @@
+//Write a program in C to accept a grade and declare the equivalent description :
+#include<stdio.h>
+int main()
+{
+  char c;
+  printf("choose any A,E,F,V,G:\n");
+  scanf("%c",&c);
+  if(c=='A')
+    printf("you have choosen average");
+  else if (c=='E')
+  printf("you have choosen excellent");
+  else if(c=='V')
+  printf("you have choosen very good");
+  else if(c=='F')
+  printf("you have choosen failed");
+  else if (c!='A'||c!='E'||c!='F'||c!='v'||c!='G')
+    printf("enter valid option");
+  
+  
+return 0;
+  
+}

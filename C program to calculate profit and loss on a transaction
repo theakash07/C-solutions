@@ -1,0 +1,20 @@
+// Write a C program to calculate profit and loss on a transaction.
+#include<stdio.h>
+int main()
+  {
+     int cost;
+     int sp;
+     int profit;
+     printf("enter cost MRP:");
+     scanf("%d",&cost);
+     printf("enter sellin price:");
+     scanf("%d",&sp);
+     profit=sp-cost;
+     if(sp>cost)
+     {
+      printf("the profit is %d",profit);
+     }
+     else
+     printf("the loss is %d",profit);
+     return 0;
+  }

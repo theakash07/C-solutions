@@ -1,0 +1,32 @@
+// Write a program in C which is a Menu-Driven Program to compute the area of the various geometrical shape.
+#include<stdio.h>
+#define pi 3.14
+int main()
+{
+  int digit;
+  printf("enter 1.for circle\n2.for rectangel\n3.square\n");
+  scanf("%d",&digit);
+  int side,radius,area,length,width;
+  switch (digit)
+  {
+  case 1: printf("enter radius");
+          scanf("%d",&radius);
+          area=pi*radius*radius;
+          printf("the area is %d",area);
+          break;
+  case 2: printf("enter length and width:");
+          scanf("%d,%d",&length,&width);
+          area=length*width;
+          printf("the area of rectangle is %d",area);
+   case 3: printf("enter side:");
+           scanf("%d",&side);
+           area=side*side;
+           printf("the are is %d",area);
+           break;
+
+  default: printf("enter any geometrical shape between \n 1.circle\n2.rectangle\n3.square");
+                 break;
+    
+  }
+  return 0;
+}

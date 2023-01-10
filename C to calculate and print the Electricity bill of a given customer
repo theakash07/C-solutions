@@ -1,0 +1,73 @@
+/* Write a program in C to calculate and print the Electricity bill of a given customer. The customer id., name and unit consumed by the user should be taken from the keyboard and display the total amount to pay to the customer. The charge are as follow : Go to the editor
+
+Unit	Charge/unit
+upto 199	@1.20
+200 and above but less than 400	@1.50
+400 and above but less than 600	@1.80
+600 and above	@2.00
+If bill exceeds Rs. 400 then a surcharge of 15% will be charged and the minimum bill should be of Rs. 100/-
+
+Test Data :
+1001
+James
+800
+Expected Output :
+Customer IDNO :1001
+Customer Name :James
+unit Consumed :800
+Amount Charges @Rs. 2.00 per unit : 1600.00
+Surchage Amount : 240.00
+Net Amount Paid By the Customer : 1840.00*/
+#include<stdio.h>
+int main()
+{
+  int id;
+  char name[100];
+  int unit;
+  float charge,schrg,tp;
+  printf("\nenter customer id:");
+  scanf("%d",&id);
+  printf("\nenter name:");
+  scanf("%s",&name);
+  printf("\nenter unit consumed:");
+  scanf("%d",&unit);
+  printf("consumer id:%d",id);
+  printf("\nname: %s",name);
+  printf("\nunit consumed: %d",unit);
+  if(unit<199)
+  {
+    printf("\namount chargerd above 199 unit is 1.20 per unit:");
+    charge=unit*1.20;
+    printf("\nbill:%0.2f",charge);
+    
+  }
+  else if(unit>=200&&unit<=400)
+  {
+       printf("amount chargerd above 200 and below 400 unit is 1.50 per unit:");
+       charge=unit*1.50;
+       printf("\nbill:%0.2f",charge);
+  }
+  else if(unit>400&&unit<=600)
+  {
+    printf("amount chargerd above 200 and below 400 unit is 1.80 per unit:");
+    charge=unit*1.80;
+    printf("\nbill: %0.2f",charge);
+  }
+  else if(unit>600)
+  {
+    printf("amount chargerd above 600 unit is 2.00 per unit");
+    charge=unit*2.00;
+    printf("\nbill: %0.2f",charge);
+  }
+  if(charge>400)
+    {
+        schrg=((charge/100)*15);
+        printf("\nsurcharge amount:%0.2f",schrg);
+        tp=schrg+charge;
+        printf("\nTotal amount to be paid : %0.2f",tp);
+    }
+  else
+    printf("\nTotal amount to be paid : %0.2f",charge);
+  
+  return 0;
+}

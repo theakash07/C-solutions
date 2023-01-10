@@ -1,0 +1,33 @@
+//Write a program in C which is a Menu-Driven Program to perform a simple calculation.
+#include<stdio.h>
+int main()
+{
+  int choice;
+  int sum,sub,mul;
+  float div;
+  printf("enter choice:");
+  scanf("%d",&choice);
+  int num_1,num_2;
+  printf("enter digits:");
+  scanf("%d%d",&num_1,&num_2);
+  
+  switch(choice)
+  {
+
+  case 1: sum=num_1+num_2;
+          printf("the sum is %d",sum);
+          break;
+  case 2: sub=num_1-num_2;
+          printf("the sub is %d",sub);
+          break;
+  case 3: mul=num_1*num_2;
+          printf("the mul is %d",mul);
+          break;
+  case 4: div=num_1/num_2;
+          printf("the div is %0.2f",div);
+          break;
+  default: printf("enter valid input:");
+           break;
+}
+return 0;
+}

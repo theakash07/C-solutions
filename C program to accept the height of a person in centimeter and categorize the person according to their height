@@ -1,0 +1,15 @@
+/*Write a C program to accept the height of a person in centimeter and categorize the person according to their height*/
+#include<stdio.h>
+int main()
+{
+    int height;//height should be in cm.
+    printf("enter height:");
+    scanf("%d",&height);
+    if(height<150)
+    printf("it's a dwarf");
+    else if(height==150)
+    printf("average height:");
+    else if(height>=165)
+    printf("tall guy");
+    return 0;
+}

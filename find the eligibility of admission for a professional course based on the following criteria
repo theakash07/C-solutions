@@ -1,0 +1,29 @@
+/* Write a C program to find the eligibility of admission for a professional course based on the following criteria:*/
+#include<stdio.h>
+int main()
+{
+    printf("criteria for admission:");
+    printf("Marks in Maths >=65 \n Marks in Phy >=55 \n Marks in Chem>=50 \n Total in all three subject >=190 \or Total in Maths and Physics >=140 ");
+    int phy,chem,maths,sum,sum1;
+    printf("\nenter marks respectively:");
+    printf("\nenter physics marks:");
+    scanf("%d",&phy);
+    printf("\nenter maths marks:");
+    scanf("%d",&chem);
+    printf("\nenter maths marks:");
+    scanf("%d",&maths);
+    sum=phy+maths+chem;
+    sum1=maths+phy;
+    if(sum>=190)
+    {
+        printf("eligible for admission");
+    }
+    else if(sum1>=140)
+    {
+        printf("eligible for admission:");
+    }
+    else if(sum&&sum<140)
+    printf("not eligible for admission:");
+    
+    return 0;
+}

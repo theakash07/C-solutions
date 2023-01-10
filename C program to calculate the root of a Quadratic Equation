@@ -1,0 +1,37 @@
+//Write a C program to calculate the root of a Quadratic Equation.
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int a,b,c,d;
+    
+    float roots,roots1,x1,x2;
+    printf("enter value of ax*x+bx+c:\n");
+    scanf("%d%d%d",&a,&b,&c);
+    d=b*b-4*a*c;
+    if(a!=0)
+    {
+        if(d==0)
+        {
+            printf("both are equal roots:");
+            x1=-b/(2.0*a);
+            x2=x1;
+        }
+        if(d>0)
+        {
+            printf("there are 2 roots:\n");
+            x1=-b+sqrt(d)/(2.0*a);
+            x2=-b+sqrt(d)/(2.0*a);
+            printf("First  Root Root1= %f\n",x1);
+	        printf("Second Root root2= %f\n",x2);
+        }
+        if(d<0)
+        {
+            printf("there is only imaginary roots:");
+        }
+        
+    }
+    else
+    printf("wrong value:");
+    return 0;
+}

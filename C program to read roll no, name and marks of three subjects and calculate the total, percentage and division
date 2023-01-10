@@ -1,0 +1,51 @@
+/*Write a C program to read roll no, name and marks of three subjects and calculate the total, percentage and division. Go to the editor
+Test Data :
+Input the Roll Number of the student :784
+Input the Name of the Student :James
+Input the marks of Physics, Chemistry and Computer Application : 70 80 90
+Expected Output :
+Roll No : 784
+Name of Student : James
+Marks in Physics : 70
+Marks in Chemistry : 80
+Marks in Computer Application : 90
+Total Marks = 240
+Percentage = 80.00
+Division = First*/
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int roll,phy,chem,ca,sum=0;
+    float percent;
+    char name[20];
+    char div[10];
+    printf("Input the Roll Number of the student:-");
+    scanf("%d",&roll);
+    printf("\nInput the Name of the Student:");
+    scanf("%s",&name);
+    printf("\nInput the marks of Physics, Chemistry and Computer Application:\n");
+    scanf("%d%d%d",&phy,&chem,&ca);
+    sum=phy+chem+ca;
+    percent=sum/3.0;
+     if (percent>=60)
+	 strcpy(div,"First");
+    else
+	if (percent<60&&percent>=48)
+	    strcpy(div,"Second");
+	else
+	    if (percent<48&&percent>=36)
+		strcpy(div,"Pass");
+	     else
+		strcpy(div,"Fail");
+    printf("Roll No : %d",roll);
+    printf("\nName of Student:%s",name);
+    printf("\nMarks in Physics:%d",phy);
+    printf("\nMarks in Chemistry:%d",chem);
+    printf("\nMarks in Computer Application:%d",ca);
+    printf("\nTotal Marks:%d",sum);
+    printf("\nPercentage %0.2f",percent);
+    printf("\n%s",div);
+    
+}

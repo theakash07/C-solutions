@@ -1,0 +1,25 @@
+//Write a program in C to read any day number in integer and display day name in the word.
+#include<stdio.h>
+int main()
+{
+  int num;
+  printf("enter num\n");
+  scanf("%d",&num);
+  if(num==1)
+  printf("it's a monday:");
+  else if(num==2)
+  printf("its a tuesday");
+  else if (num==3)
+  printf("its a wednesday");
+  else if(num==4)
+  printf("its a thursday");
+  else if(num==5)
+  printf("its friday");
+  else if(num==6)
+  printf("its a saturday");
+  else if(num==7)
+  printf("its a sunday");
+   else if(num<1||num>7)
+   printf("enter valid numberL");
+  return 0;
+}

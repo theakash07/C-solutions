@@ -1,0 +1,17 @@
+//Write a C program to check whether an alphabet is a vowel or consonant.
+#include<stdio.h>
+int main()
+{
+  char c;
+  printf("enter alphabet:");
+  scanf("%c",&c);
+  if(c=='a'||c=='e'||c=='i'||c=='o'||c =='u')
+    printf("it's a vowel");
+  else if((c>='a' && c<='z')||(c>='A' && c<='Z'))
+  printf("it's a constant:");
+  else
+  
+  printf("it's not an alphabet:");
+
+  return 0;
+}

@@ -1,0 +1,39 @@
+// Write a program in C to read any Month Number in integer and display Month name in the word.
+#include<stdio.h>
+int main()
+{
+  int mon;
+  printf("enter digit (between 1-12):");
+  scanf("%d",&mon);
+  switch(mon)
+  {
+  case 1: printf("it's jan with 31 days");
+          break;
+  case 2: printf("its feb with 28 days");
+          break;
+  case 3: printf("its march with 30 days");
+          break;
+  case 4: printf("its april with 31 days");
+          break;
+  case 5: printf("it's may with 30 days");
+          break;
+  case 6: printf("it's june with 31 days");
+          break;
+  case 7: printf("it's july with 30 days");
+          break;
+  case 8: printf("it's august with 31 days");
+          break;
+  case 9: printf("it's september with 30 days");
+          break;
+  case 10:printf("it's ocotber with 31 days");
+          break;
+  case 11:printf("it's november with 30 days");
+          break;
+  case 12:printf("it's december with 31 days");
+          break;
+  defaul: printf("enter valid month number:");
+          break;
+}
+return 0;
+
+}

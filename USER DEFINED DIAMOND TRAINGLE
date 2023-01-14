@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int rows,space,k;
+    unsigned int z;
+    printf("enter number of rows:\n");
+    scanf("%lu",&rows);
+    //spc=rows+4-1;
+    for(int i =1;i<=rows;i++)
+    {
+        for(space = 0; space <= rows - i; space++)  
+        {
+            printf(" ");
+        }
+
+        for(int j=1;j<=i*2-1;j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    //making the second lower face of diamond
+    for(int i=rows;i>=1;i--)
+    {
+        for(space = rows-i; space >= 1; space--)
+        {
+            printf(" ");
+        }
+        for(int j=i*2-1;j>=1;j--)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    
+    scanf("%lu",z);
+    return 0;
+}
+

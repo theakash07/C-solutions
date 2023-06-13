@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int a[50],size,pos,i;
+    puts("Enter size of array:");
+    scanf("%d",&size);
+    //taking input in array
+    for(i=1;i<=size;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    if(size<=0)//making boundation to encounter fault
+    {
+        printf("Array is empty");
+    }
+    else{
+        for(i=1;i<=size-1;i++)
+        {
+            a[i]=a[i+1];
+        }
+        size--;
+    }
+    //updated array is traversal
+    for(i=1;i<=size;i++)
+    {
+        printf("%d",a[i]);
+    }
+    return 0;
+}

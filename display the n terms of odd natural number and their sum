@@ -1,0 +1,20 @@
+//Write a program in C to display the n terms of odd natural number and their sum 
+#include<stdio.h>
+int main()
+{
+  int n,i,sum=0;
+  printf("enter the range limit:");
+  scanf("%d",&n);
+    
+      printf("odd numbers are:");
+  for(i=1;i<=n;i++)
+  {
+    if(i%2!=0)
+    {
+      printf("%d",i);
+      sum+=i;
+    }
+      
+  }
+  printf("sum=%d",sum);
+}

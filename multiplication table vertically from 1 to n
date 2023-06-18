@@ -1,0 +1,19 @@
+//Write a program in C to display the multiplication table vertically from 1 to n
+#include<stdio.h>
+int main()
+{
+  int n,i,j,table;
+  printf("enter table to last printed:");
+  scanf("%d",&n);
+  for(i=1;i<=n;i++)
+  {
+    for(j=1;j<=10;j++)
+    {
+      printf("%dx%d=",i,j);
+      table=i*j;
+      printf("%d\n",table);
+    }
+    printf("\n");
+  }
+  return 0;
+}

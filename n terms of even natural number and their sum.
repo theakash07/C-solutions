@@ -1,0 +1,19 @@
+//Write a program in C to display the n terms of even natural number and their sum.
+#include<stdio.h>
+int main()
+{
+  int i,sum=0;
+  int n;
+  printf("enter terms:\n");
+  scanf("%d",&n);
+  for(i=1;i<=n;i++)
+  {
+    if(i%2==0)
+    {
+      printf("%2d",i);
+      sum+=i;
+    }
+  
+  }
+  printf("\nthe sum is %d",sum);
+}
